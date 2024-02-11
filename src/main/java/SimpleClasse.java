@@ -14,5 +14,4 @@ public class SimpleClasse {
     public int add(int firstNumber, int b) {
         return firstNumber + b;
     }
-
 }
