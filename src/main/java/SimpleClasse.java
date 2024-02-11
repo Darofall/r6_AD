@@ -3,6 +3,8 @@ import java.time.LocalDate;
 public class SimpleClasse {
     public static void main(String[] args) {
         new SimpleClasse().add(1, 2);
+        DateUtils.isNowBetween(LocalDate.MIN, LocalDate.MAX);
+        DateUtils.isDateBetween(LocalDate.of(2019, 1, 1), LocalDate.MIN, LocalDate.MAX);
     }
     /**
      * Adds a and b
@@ -13,14 +15,5 @@ public class SimpleClasse {
     public int add(int firstNumber, int b) {
         return firstNumber + b;
     }
-    public static boolean isNowBetween(LocalDate startingDate, LocalDate endingDate)
-    {
-        LocalDate now = LocalDate.now();
-        return isDateBetween(now, endingDate, startingDate);
-    }
 
-    private static boolean isDateBetween(LocalDate date, LocalDate endingDate, LocalDate startingDate) {
-        return date.isAfter(startingDate) &&
-                date.isBefore(endingDate);
-    }
 }
