@@ -1,9 +1,10 @@
 package org.example;
 
-public class ChildFeeStrategy {
+public class ChildFeeStrategy implements FeeStrategy {
     static final double CHILD_PRICE_BASE = 100;
 
-     double calculateChildFee(Visitor visitor, TicketType ticketType, double fee) {
+     @Override
+     public double calculate(Visitor visitor, TicketType ticketType, double fee) {
         // calculate price for children
         if ((visitor.getAge() <= 14) && (TicketType.HALF_DAY == ticketType)) {
             fee = CHILD_PRICE_BASE * 0.2;
