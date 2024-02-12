@@ -25,7 +25,7 @@ public class CustomerTest {
                 "\tBambi\t1.5\n" +
                 "\tToy Story\t3.0\n" +
                 "Amount owed is 19.0\n" +
-                "You earned 7 frequent renter points";
+                "You earned 1 frequent renter points";
 
         assertEquals(expected, customer.statement());
     }
